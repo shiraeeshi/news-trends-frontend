@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+    frontend:
+        image: node:8
+        volumes:
+            - .:/proj/
+        command: "tail -f /dev/null"
+        ports:
+            - "8181:8080"
+        networks:
+            - front_shared-network
+networks:
+    front_shared-network:
+        external:
+            name: news-trends-shared-network
