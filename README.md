@@ -1,6 +1,6 @@
 # news-trends-rest-api
 
-The project implements the frontend for showing the news saved by ```news-trends-broadcast``` and made available through RESTful API by ```news-trends-rest-api``` project.
+The project implements the frontend for showing the news saved by RSS listener (either ```news-trends-broadcast``` or ```news-trends-co-partition``` project) and made available through RESTful API by ```news-trends-rest-api``` project.
 
 ## Prerequisites
 
@@ -8,7 +8,7 @@ You need to have ```sbt``` and ```docker-compose``` installed on your machine.
 
 ## How to run
 
-First go to the ```news-trends-broadcast``` project and issue the following command:
+First go to the RSS listener project and issue the following command:
 
 ```
 sbt assembly
@@ -30,7 +30,7 @@ docker-compose up
 ```
 It will start the container for the RESTful API.
 
-Now that we have both ```news-trends-broadcast``` and ```news-trends-rest-api``` up and running, we can start this project's container:
+Now that we have both RSS listener and ```news-trends-rest-api``` up and running, we can start this project's container:
 
 ```
 docker-compose up
